@@ -9,7 +9,7 @@ const MainDisplay = () => {
   const [widthData, setWidthData ] = useState(0)
   const [heightData, setHeightData] = useState(0)
   const [rasterData, setRasterData] = useState(null);
-  const cogFilePath = "../../sample.tif";
+  const cogFilePath = "https://csg100320027cb83207.blob.core.windows.net/sdi-assigments/sample.tif?sv=2023-01-03&st=2025-04-11T05%3A14%3A17Z&se=2025-04-20T05%3A14%3A00Z&sr=b&sp=r&sig=YLfMhF3AsE0zZtD4LTT51w2%2BE7yjc6GwUJpkroswwLs%3D";
 
   useEffect(() => {
     async function loadCOG() {
@@ -34,3 +34,4 @@ const MainDisplay = () => {
   return loading ? <Loading /> : <Canvas imageData={imageData} widthData={widthData} heightData={heightData} rasterData={rasterData}/>;
 };
 export default MainDisplay;
+
